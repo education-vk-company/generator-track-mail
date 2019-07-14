@@ -1,0 +1,89 @@
+{
+  "name": "generator-track-mail",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "Alexey Opalev",
+    "email": "a.opalev@corp.mail.ru",
+    "url": "https://github.com/chexex"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "track-mail",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "yeoman-test": "^1.7.0",
+    "yeoman-assert": "^3.1.0",
+    "eslint": "^5.16.0",
+    "prettier": "^1.15.2",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-config-xo": "^0.25.0",
+    "jest": "^24.8.0",
+    "@wemake-services/eslint-config-javascript": "^0.3.0",
+    "@wemake-services/eslint-config-jest": "^0.1.5",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.7.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-sonarjs": "^0.4.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-unicorn": "^9.1.1"
+  },
+  "engines": {
+    "npm": ">= 8"
+  },
+  "dependencies": {
+    "yeoman-generator": "^2.0.1",
+    "chalk": "^2.1.0",
+    "yosay": "^2.0.1",
+    "to-case": "^2.0.0"
+  },
+  "jest": {
+    "transform": {},
+    "roots": [
+      "tests"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest ./tests"
+  },
+  "repository": "chexex/generator-track-mail",
+  "license": "Apache-2.0"
+}

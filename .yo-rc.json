@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Alexey Opalev",
+      "authorEmail": "a.opalev@corp.mail.ru",
+      "authorUrl": "https://github.com/chexex"
+    }
+  }
+}
