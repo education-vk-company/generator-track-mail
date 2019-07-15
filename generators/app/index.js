@@ -5,19 +5,7 @@ const to = require('to-case')
 const yosay = require('yosay')
 
 class TrackMailGenerator extends Generator {
-  // welcome() {
-  //   this.log(
-  //     yosay(
-  //       `
-  //       Welcome to ${chalk.red('generator-track-mail')}!
-  //       This generator gives react, redux, tests, hooks and ci.
-  //       Enjoy coding and be a diligent student!
-  //     `,
-  //     ),
-  //   )
-  // }
-
-  prompting() {
+  welcome() {
     this.log(
       yosay(
         `
@@ -27,6 +15,9 @@ class TrackMailGenerator extends Generator {
       `,
       ),
     )
+  }
+
+  prompting() {
     return this.prompt([
       {
         name: 'projectName',
@@ -61,10 +52,10 @@ class TrackMailGenerator extends Generator {
     // Return {
     //   public() {
     this.fs.copyTpl(this.templatePath('public/index.html'), this.destinationPath('public/index.html'), {
-      projectName: to.title(this.projectName),
+      projectName: to.title(this.props.projectName),
     })
     this.fs.copyTpl(this.templatePath('public/manifest.json'), this.destinationPath('public/manifest.json'), {
-      projectName: to.title(this.projectName),
+      projectName: to.title(this.props.projectName),
     })
     this.fs.copy(this.templatePath('public/favicon.ico'), this.destinationPath('public/favicon.ico'))
     // },
@@ -92,7 +83,7 @@ class TrackMailGenerator extends Generator {
     // },
     // readme() {
     this.fs.copyTpl(this.templatePath('README.md'), this.destinationPath('README.md'), {
-      projectName: to.title(this.projectName),
+      projectName: to.title(this.props.projectName),
     })
     // },
 
