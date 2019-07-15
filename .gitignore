@@ -2,6 +2,7 @@
 #### macos ####
 # General
 *.DS_Store
+.idea
 .AppleDouble
 .LSOverride
 
