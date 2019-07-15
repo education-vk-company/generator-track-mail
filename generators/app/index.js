@@ -18,17 +18,21 @@ class TrackMailGenerator extends Generator {
   }
 
   prompting() {
+    const year = new Date().getFullYear()
+    const user = process.env.USER
+
     return this.prompt([
       {
         name: 'projectName',
         type: 'input',
         message: 'Project name:',
-        default: path.basename(this.destinationPath()),
+        default: `track-mailru-${year}-${to.lower(user || path.basename(this.destinationPath()))}`,
       },
       {
         name: 'projectDescription',
         type: 'input',
         message: 'Project description:',
+        default: `Mail.Ru Group Frontend course, ${year}`,
       },
       {
         name: 'projectVersion',
@@ -40,6 +44,7 @@ class TrackMailGenerator extends Generator {
         name: 'authorName',
         type: 'input',
         message: 'Author name:',
+        default: to.title(user),
         store: true,
       },
     ]).then((props) => {
