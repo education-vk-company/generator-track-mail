@@ -88,7 +88,6 @@
     "lint:md": "remark -q -f -r docs/.remarkrc.js .",
     "lint:dup": "jscpd -g --threshold=1 client tests docker",
     "ci": "npm run test && npm run build && npm run test:sec"
-
   },
   "husky": {
     "hooks": {
