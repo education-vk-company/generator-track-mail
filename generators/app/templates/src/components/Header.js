@@ -3,6 +3,8 @@ import logo from '../assets/logo.svg'
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/core'
 
+const year = new Date().getFullYear()
+
 const rotate360 = keyframes`
   from {
     transform: rotate(0deg);
@@ -28,7 +30,7 @@ function Header() {
   return (
     <TopBar>
       <img src={logo} className="redux-logo" alt="logo" />
-      <h2>Welcome to Create Redux App</h2>
+      <h2>Track Mail, {year}</h2>
     </TopBar>
   )
 }

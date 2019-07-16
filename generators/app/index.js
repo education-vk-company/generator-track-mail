@@ -95,6 +95,7 @@ class TrackMailGenerator extends Generator {
     // gitignore() {
     this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'))
     // },
+    this.fs.copy(this.templatePath('env'), this.destinationPath('.env'))
 
     // gitattributes() {
     this.fs.copy(this.templatePath('gitattributes'), this.destinationPath('.gitattributes'))

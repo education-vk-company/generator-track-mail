@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Counter from '../components/Counter'
-import ActionTypes from '../constants/actionTypes'
+import ActionTypes from '../constants/ActionTypes'
 import { incrementIfOdd } from '../actions/counter'
 import { connect } from 'react-redux'
 
