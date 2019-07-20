@@ -1,18 +1,19 @@
 {
   "name": "generator-track-mail",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "",
-  "homepage": "",
+  "homepage": "https://github.com/frontend-track-mail-ru",
   "author": {
     "name": "Alexey Opalev",
     "email": "a.opalev@corp.mail.ru",
-    "url": "https://github.com/chexex"
+    "url": "https://github.com/frontend-track-mail-ru/generator-track-mail"
   },
   "files": [
     "generators"
   ],
   "main": "generators/app/index.js",
   "keywords": [
+    "track.mail.ru",
     "track-mail",
     "yeoman-generator"
   ],
