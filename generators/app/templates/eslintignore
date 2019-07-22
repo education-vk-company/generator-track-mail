@@ -2,3 +2,5 @@ template/
 node_modules/
 build/
 !.eslintrc.js
+src/registerServiceWorker.js
+src/**/__tests__/**

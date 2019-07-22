@@ -1,4 +1,4 @@
-from node:12-alpine as build-stage
+from node:alpine as build-stage
 
 WORKDIR /app
 
@@ -9,4 +9,4 @@ RUN npm run build
 
 from abiosoft/caddy
 COPY --from=build-stage /app/build /www
-COPY ./Caddyfile /etc/Caddyfile
+COPY docker/frontend/Caddyfile /etc/Caddyfile

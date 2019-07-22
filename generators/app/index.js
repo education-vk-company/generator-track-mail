@@ -27,12 +27,9 @@ class TrackMailGenerator extends Generator {
         'name': 'projectName',
         'type': 'input',
         'message': 'Project name:',
-        'default': `
-          track-
-          mail-
-          ${year}-
-          ${to.slug(user || path.basename(this.destinationPath()))}
-        `,
+        'default': `track-mail-${year}-${
+          to.slug(user || path.basename(this.destinationPath()))
+        }`,
       },
       {
         'name': 'projectDescription',
