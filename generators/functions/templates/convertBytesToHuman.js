@@ -1,5 +1,5 @@
 /*
-Martin gonna write some description
+Martin is gonna write some description
  */
 
 function convertBytesToHuman(bytes) {
