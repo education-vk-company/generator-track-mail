@@ -9,7 +9,7 @@ class TrackMailGenerator extends Generator {
     this.log(
       yosay(
         `
-        Welcome to ${chalk.red('generator-track-mail')}!
+        Welcome to ${chalk.red('generator-mail-ru')}!
         This generator gives react, redux, tests, hooks and ci.
         Enjoy coding and be a diligent student!
       `,
@@ -24,18 +24,35 @@ class TrackMailGenerator extends Generator {
 
     return this.prompt([
       {
+        'name': 'course',
+        'type': 'list',
+        'message': 'Your course:',
+        'choices': [{
+          'name': 'Techno-atom',
+          'value': 'atom',
+        }, {
+          'name': 'Techno-track',
+          'value': 'track',
+        }],
+      },
+      {
         'name': 'projectName',
         'type': 'input',
         'message': 'Project name:',
-        'default': `track-mail-${year}-${
-          to.slug(user || path.basename(this.destinationPath()))
-        }`,
+        default (answers) {
+          return `${answers.course}-mail-${year}-${
+            to.slug(user || path.basename(this.destinationPath()))
+          }`
+        },
       },
       {
         'name': 'projectDescription',
         'type': 'input',
         'message': 'Project description:',
-        'default': `Mail.Ru Group Frontend course, ${year}`,
+        default (answers) {
+          // eslint-disable-next-line max-len
+          return `Mail.Ru Group Frontend ${to.title(answers.course)} course, ${year}`
+        },
       },
       {
         'name': 'projectVersion',
@@ -73,7 +90,7 @@ class TrackMailGenerator extends Generator {
       }
     )
     this.fs.copy(
-      this.templatePath('public/favicon.ico'),
+      this.templatePath(`public/favicon-${this.props.course}.ico`),
       this.destinationPath('public/favicon.ico')
     )
     this.fs.copy(
@@ -160,6 +177,19 @@ class TrackMailGenerator extends Generator {
     this.fs.copy(
       this.templatePath('src'),
       this.destinationPath('src')
+    )
+    this.fs.copyTpl(
+      this.templatePath('src/components/Header.js'),
+      this.destinationPath('src/components/Header.js'), {
+        'course': to.title(this.props.course),
+      }
+    )
+    this.fs.delete(
+      this.destinationPath('src/assets')
+    )
+    this.fs.copy(
+      this.templatePath(`src/assets/logo-${this.props.course}.svg`),
+      this.destinationPath('src/assets/logo.svg')
     )
     this.fs.copyTpl(
       this.templatePath('package.json'),

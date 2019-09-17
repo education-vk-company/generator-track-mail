@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "chalk": "^2.1.0",
+    "lodash": "^4.17.15",
     "mocha": "^6.1.4",
     "to-case": "^2.0.0",
     "yeoman-generator": "^2.0.1",

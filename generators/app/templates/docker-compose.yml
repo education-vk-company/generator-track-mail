@@ -1,5 +1,5 @@
 # Default compose file for development.
-# Should be used directly only in development.
+# Should be used directly in development.
 
 version: "3.6"
 services:

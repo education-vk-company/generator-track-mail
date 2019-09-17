@@ -96,6 +96,7 @@ describe('run yeoman generator-track-mail ', () => {
   beforeAll(() => helpers
     .run(path.join(__dirname, '../generators/app'))
     .withPrompts({
+      'course': 'atom',
       'projectName': 'projectName',
       'projectDescription': 'projectDescription',
       'projectVersion': 'projectVersion',
