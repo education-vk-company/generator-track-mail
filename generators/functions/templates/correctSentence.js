@@ -19,5 +19,5 @@ correctSentence("Greetings, friends.") == "Greetings, friends."
 
 function correctSentence(text) {
   // your solution goes here
-  return text
+  return text;
 }
