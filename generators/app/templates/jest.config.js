@@ -7,11 +7,13 @@ module.exports = {
 
   'moduleFileExtensions': [
     'js',
+    'jsx',
     'json',
   ],
   'transform': {
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2|svg|svg\\?inline)$':
       'jest-transform-stub',
+    '^.+\\.jsx?$': 'babel-jest'
   },
   'moduleNameMapper': {
     '^~/(.*)$': '<rootDir>/client/$1',
@@ -19,26 +21,21 @@ module.exports = {
   },
   'testPathIgnorePatterns': [
     '/node_modules/',
-    '/docker/testcafe/',
+    '/docker/',
   ],
 
   'collectCoverage': true,
   'coverageThreshold': {
-    'global': { 'statements': 90 },
+    'global': {
+      'branches': 40,
+      'functions': 40,
+      'lines': 40,
+      'statements': 50
+    },
   },
   'coveragePathIgnorePatterns': [
     '/node_modules/',
     '/tests/',
   ],
-
-  'setupFilesAfterEnv': [
-    // Add matchers via expect.extend()
-    '<rootDir>/tests/setup.ts',
-  ],
-
-  'snapshotSerializers': [
-    '<rootDir>/node_modules/jest-serializer-vue',
-  ],
-
   'verbose': true,
 }

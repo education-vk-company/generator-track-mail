@@ -10,6 +10,8 @@
       {
         "spec": true
       }
-    ]
+    ],
+    "babel-plugin-styled-components",
+    "@babel/plugin-syntax-dynamic-import"
   ]
 }
