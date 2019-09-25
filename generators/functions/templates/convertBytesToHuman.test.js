@@ -7,14 +7,15 @@
  * convertBytesToHuman(5) === '5 B'
  */
 
+import convertBytesToHuman from './convertBytesToHuman';
 
 test('Возвращает false для неправильного типа данных', () => {
-  expect(convertBytesToHuman(/* ... */).toBe(/* ... */))
+  expect(convertBytesToHuman(/* ... */)).toBe(/* ... */)
   // ...
 });
 
 test('Возвращает корректное значение для чисел', () => {
-  expect(convertBytesToHuman(/* ... */).toBe(/* ... */))
+  expect(convertBytesToHuman(/* ... */)).toBe(/* ... */)
   // ...
 });
 

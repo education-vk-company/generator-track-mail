@@ -41,7 +41,7 @@ class TrackMailGenerator extends Generator {
         'message': 'Project name:',
         default (answers) {
           return `${answers.course}-mail-${year}-${
-            to.slug(user || path.basename(this.destinationPath()))
+            to.slug(user || path.basename(this.destinationPath() || ''))
           }`
         },
       },
@@ -51,7 +51,7 @@ class TrackMailGenerator extends Generator {
         'message': 'Project description:',
         default (answers) {
           // eslint-disable-next-line max-len
-          return `Mail.Ru Group Frontend ${to.title(answers.course)} course, ${year}`
+          return `Mail.Ru Group Frontend ${to.title(answers.course || '')} course, ${year}`
         },
       },
       {
@@ -64,7 +64,7 @@ class TrackMailGenerator extends Generator {
         'name': 'authorName',
         'type': 'input',
         'message': 'Author name:',
-        'default': to.title(user),
+        'default': to.title(user || 'No.Name'),
         'store': true,
       },
       // eslint-disable-next-line max-len
@@ -207,14 +207,6 @@ class TrackMailGenerator extends Generator {
         'projectVersion': this.props.projectVersion,
       }
     )
-  }
-
-  install () {
-    this.installDependencies({
-      'npm': true,
-      'bower': false,
-      'yarn': false,
-    })
   }
 }
 

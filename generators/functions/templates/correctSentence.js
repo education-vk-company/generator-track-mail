@@ -17,7 +17,7 @@ correctSentence("Greetings, friends") == "Greetings, friends."
 correctSentence("Greetings, friends.") == "Greetings, friends."
  */
 
-function correctSentence(text) {
+export default function correctSentence(text) {
   // your solution goes here
   return text;
 }
