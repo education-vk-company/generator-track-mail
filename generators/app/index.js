@@ -41,7 +41,7 @@ class TrackMailGenerator extends Generator {
         'message': 'Project name:',
         default (answers) {
           return `${answers.course}-mail-${year}-${
-            to.slug(user || path.basename(this.destinationPath() || ''))
+            to.slug(user || path.basename(this.destinationPath()) || '')
           }`
         },
       },
