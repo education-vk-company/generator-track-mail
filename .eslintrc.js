@@ -1,8 +1,10 @@
 module.exports = {
-  'extends': [
-    '@wemake-services/javascript',
-  ],
-  'env': {
-    'node': true,
-  },
-}
+	extends: ['airbnb'],
+	env: {
+		node: true,
+	},
+	rules: {
+		"no-tabs": ["error", { "allowIndentationTabs": true }],
+		"indent": ["error", "tab", { "SwitchCase": 1 }]
+	}
+};
