@@ -1,8 +1,6 @@
 module.exports = {
-	extends: [
-		'airbnb',
-	],
+	extends: ['airbnb'],
 	env: {
-		'node': true,
+		node: true,
 	},
 };
