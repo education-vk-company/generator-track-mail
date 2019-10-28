@@ -71,7 +71,6 @@ class TrackMailGenerator extends Generator {
 				store: true,
 			},
 			// eslint-disable-next-line max-len
-			// eslint-disable-next-line promise/prefer-await-to-then,promise/always-return
 		]).then((props) => {
 			// To access props later use this.props.projectName;
 			this.props = props;

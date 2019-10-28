@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 const helpers = require('yeoman-test');
 const fs = require('fs');
 const path = require('path');
@@ -72,10 +73,6 @@ const cases = [
 		files: ['.dockerignore'],
 	},
 	{
-		desc: 'generates a jest.config.js file',
-		files: ['jest.config.js'],
-	},
-	{
 		desc: 'generates a .nvmrc file',
 		files: ['.nvmrc'],
 	},
@@ -86,18 +83,16 @@ const cases = [
 ];
 
 describe('run yeoman generator-track-mail ', () => {
-	beforeAll(() =>
-		helpers
-			.run(path.join(__dirname, '../generators/app'))
-			.withPrompts({
-				course: 'atom',
-				projectName: 'projectName',
-				projectDescription: 'projectDescription',
-				projectVersion: 'projectVersion',
-				authorName: 'authorName',
-			})
-			.toPromise(),
-	);
+	beforeAll(() => helpers
+		.run(path.join(__dirname, '../generators/app'))
+		.withPrompts({
+			course: 'atom',
+			projectName: 'projectName',
+			projectDescription: 'projectDescription',
+			projectVersion: 'projectVersion',
+			authorName: 'authorName',
+		})
+		.toPromise());
 
 	// test included files
 	for (const { desc, files } of cases) {

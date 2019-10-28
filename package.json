@@ -18,7 +18,6 @@
     "yeoman-generator"
   ],
   "devDependencies": {
-    "@wemake-services/eslint-config-jest": "^0.1.5",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
@@ -88,7 +87,7 @@
     ]
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint . -c .eslintrc.js",
     "pretest": "npm run lint",
     "test": "jest tests"
   },
