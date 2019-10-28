@@ -97,7 +97,6 @@ class TrackMailGenerator extends Generator {
 			this.templatePath(`public/favicon-${this.props.course}.ico`),
 			this.destinationPath('public/favicon.ico'),
 		);
-		this.fs.copy(this.templatePath('jest.config.js'), this.destinationPath('jest.config.js'));
 		this.fs.copy(
 			this.templatePath('stylelint.config.js'),
 			this.destinationPath('stylelint.config.js'),
