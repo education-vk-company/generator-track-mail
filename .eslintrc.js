@@ -1,6 +1,6 @@
 module.exports = {
 	extends: [
-		'@wemake-services/javascript',
+		'airbnb',
 	],
 	env: {
 		'node': true,
