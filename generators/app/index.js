@@ -102,7 +102,6 @@ class TrackMailGenerator extends Generator {
 			this.destinationPath('stylelint.config.js'),
 		);
 		this.fs.copy(this.templatePath('travis.yml'), this.destinationPath('.travis.yml'));
-		this.fs.copy(this.templatePath('babelrc'), this.destinationPath('.babelrc'));
 		this.fs.copy(
 			this.templatePath('docker/frontend/Caddyfile'),
 			this.destinationPath('docker/frontend/Caddyfile'),
@@ -135,7 +134,7 @@ class TrackMailGenerator extends Generator {
 		this.fs.copy(this.templatePath('gitattributes'), this.destinationPath('.gitattributes'));
 
 		this.fs.copy(this.templatePath('editorconfig'), this.destinationPath('.editorconfig'));
-		this.fs.copy(this.templatePath('prettierrc'), this.destinationPath('.prettierrc'));
+		this.fs.copy(this.templatePath('prettier.config.js'), this.destinationPath('prettier.config.js'));
 		this.fs.copy(this.templatePath('eslintignore'), this.destinationPath('.eslintignore'));
 		this.fs.copy(this.templatePath('eslintrc.json'), this.destinationPath('.eslintrc.json'));
 		this.fs.copy(this.templatePath('src'), this.destinationPath('src'));
