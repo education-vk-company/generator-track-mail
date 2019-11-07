@@ -66,7 +66,7 @@
 		"lint:js:fix": "npm run lint:js -- --fix",
 		"lint:js": "eslint src/**/*.js -c .eslintrc.json",
 		"lint:css": "stylelint 'src/**/*.{scss,css}' && stylelint --rd 'src/**/*.{scss,css}'",
-		"lint:dup": "jscpd -g --threshold=1 client tests docker",
+		"lint:dup": "jscpd -g --threshold=1 tests docker",
 		"clean": "rm -rf build",
 		"test": "npm run test:engine && npm run test:unit && npm run lint",
 		"test:engine": "check-engine",
