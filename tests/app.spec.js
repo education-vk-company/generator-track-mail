@@ -50,15 +50,11 @@ const cases = [
 	},
 	{
 		desc: 'generates a .prettierrc file',
-		files: ['.prettierrc'],
+		files: ['prettier.config.js'],
 	},
 	{
 		desc: 'generates a stylelint.config.js file',
 		files: ['stylelint.config.js'],
-	},
-	{
-		desc: 'generates a .babelrc file',
-		files: ['.babelrc'],
 	},
 	{
 		desc: 'generates a .travis.yml file',
