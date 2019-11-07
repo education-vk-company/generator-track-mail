@@ -41,6 +41,7 @@ CounterContainer.propTypes = {
 function mapStateToProps(state) {
 	return {
 		counter: state.counter,
+		dispatch: PropTypes.func.isRequired,
 	};
 }
 
