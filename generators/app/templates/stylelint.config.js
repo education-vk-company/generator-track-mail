@@ -23,13 +23,15 @@ module.exports = {
 			true,
 			{
 				severity: 'warning',
-				ignore: ['flexbox'],
+				ignore: ['flexbox', 'viewport-units'],
 			},
 		],
 
 		// a11y
 		'a11y/content-property-no-static-value': true,
-
-		'scale-unlimited/declaration-strict-value': ['/color/', 'fill', 'stroke'],
+		'scale-unlimited/declaration-strict-value': [
+			['/color/', 'fill', 'stroke'],
+			{ disableFix: true },
+		],
 	},
 };
