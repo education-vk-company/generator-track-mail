@@ -14,6 +14,8 @@ Then generate your new project:
 
 ```bash
 yo track-mail
+# or
+yo track-mail:functions
 ```
 
 ## Getting To Know Yeoman
