@@ -2,7 +2,7 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 
-class FunctionsGenerator extends Generator {
+class SimpleChatGenerator extends Generator {
 	welcome() {
 		this.log(
 			yosay(
@@ -29,4 +29,4 @@ class FunctionsGenerator extends Generator {
 	}
 }
 
-module.exports = FunctionsGenerator;
+module.exports = SimpleChatGenerator;

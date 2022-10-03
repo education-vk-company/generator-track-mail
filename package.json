@@ -91,6 +91,6 @@
     "pretest": "npm run lint",
     "test": "jest tests"
   },
-  "repository": "chexex/generator-track-mail",
+  "repository": "track-mail-ru/generator-track-mail",
   "license": "Apache-2.0"
 }

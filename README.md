@@ -1,5 +1,5 @@
 # generator-track-mail [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> 
+>
 
 ## Installation
 
@@ -16,6 +16,8 @@ Then generate your new project:
 yo track-mail
 # or
 yo track-mail:functions
+# or
+yo track-mail:simple-chat
 ```
 
 ## Getting To Know Yeoman
